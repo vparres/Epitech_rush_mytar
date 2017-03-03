@@ -5,10 +5,10 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:45:07 2017 Miles PROWER
-** Last update Fri Mar  3 21:46:06 2017 Miles PROWER
+** Last update Fri Mar  3 21:56:39 2017 Miles PROWER
 */
 
-#ifndef MY_ARCHIVE_H_
-# define MY_ARCHIVE_H_
+#ifndef ARCHIVE_H_
+# define ARCHIVE_H_
 
-#endif /* MY_ARCHIVE_H_ */
+#endif /* !ARCHIVE_H_ */

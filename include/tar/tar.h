@@ -5,10 +5,10 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:47:51 2017 Miles PROWER
-** Last update Fri Mar  3 21:48:11 2017 Miles PROWER
+** Last update Fri Mar  3 21:57:15 2017 Miles PROWER
 */
 
-#ifndef MY_TAR_H_
-# define MY_TAR_H_
+#ifndef TAR_H_
+# define TAR_H_
 
-#endif /* MY_TAR_H_ */
+#endif /* !TAR_H_ */
