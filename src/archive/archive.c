@@ -5,11 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:42:28 2017 Miles PROWER
-<<<<<<< HEAD
-** Last update Sat Mar  4 15:05:08 2017 Miles PROWER
-=======
-** Last update Sat Mar  4 14:44:27 2017 Adrien KELLER
->>>>>>> 8b1b5302d64067d5866b98cbb7feae6699833589
+** Last update Sat Mar  4 15:16:07 2017 Miles PROWER
 */
 
 #include "archive/archive.h"
@@ -18,7 +14,6 @@ int	main(int argc, char **argv)
 {
   int	c;
 
-<<<<<<< HEAD
   verbose = 0;
   while ((c = getopt(argc, argv, "v")) != -1)
     {
@@ -29,14 +24,6 @@ int	main(int argc, char **argv)
     }
 
   printf("Verbose mode : %i\nOptind: %i\n", verbose, optind);
-=======
-  if (argc < 2)
-  {
-    write(2, "Not enough arguments\n", 21);
-    return (84);
-  }
   create_file(argc, argv);
->>>>>>> 8b1b5302d64067d5866b98cbb7feae6699833589
-
   return (0);
 }
