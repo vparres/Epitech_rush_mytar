@@ -5,7 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:42:28 2017 Miles PROWER
-** Last update Sat Mar  4 14:23:37 2017 Adrien KELLER
+** Last update Sat Mar  4 14:44:27 2017 Adrien KELLER
 */
 
 #include <sys/types.h>
@@ -22,7 +22,7 @@ int	main(int argc, char *argv[])
     write(2, "Not enough arguments\n", 21);
     return (84);
   }
-  create_file(argv);
+  create_file(argc, argv);
 
   return (0);
 }
