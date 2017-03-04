@@ -5,7 +5,7 @@
 ** Login   <adrien.keller@epitech.eu>
 **
 ** Started on  Sat Mar  4 14:14:06 2017 Adrien KELLER
-** Last update Sat Mar  4 15:20:49 2017 Adrien KELLER
+** Last update Sat Mar  4 15:25:39 2017 Adrien KELLER
 */
 
 #include <sys/types.h>
@@ -26,7 +26,7 @@ int	create_file(int argc, char **argv, int opt1)
   while (i != argc)
   {
     stat(argv[i], &st);
-    printf("size of file %i : %i\n", i, st.st_size);
+    printf("size of file %i : %l\n", i, st.st_size);
     i++;
   }
   //create_header();
