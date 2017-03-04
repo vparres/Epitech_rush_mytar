@@ -5,7 +5,7 @@
 ** Login   <adrien.keller@epitech.eu>
 **
 ** Started on  Sat Mar  4 14:14:06 2017 Adrien KELLER
-** Last update Sat Mar  4 14:50:59 2017 Adrien KELLER
+** Last update Sat Mar  4 15:20:49 2017 Adrien KELLER
 */
 
 #include <sys/types.h>
@@ -14,12 +14,15 @@
 
 #include "archive/archive.h"
 
-int	create_file(int argc, char **argv)
+int	create_file(int argc, char **argv, int opt1)
 {
   struct stat	st;
   int	i;
 
-  i = 2;
+  if (opt1 == 2)
+    i = 3;
+  else
+    i = 2;
   while (i != argc)
   {
     stat(argv[i], &st);
