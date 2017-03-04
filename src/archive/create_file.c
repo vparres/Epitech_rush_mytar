@@ -5,7 +5,7 @@
 ** Login   <adrien.keller@epitech.eu>
 **
 ** Started on  Sat Mar  4 14:14:06 2017 Adrien KELLER
-** Last update Sat Mar  4 15:28:59 2017 Adrien KELLER
+** Last update Sat Mar  4 15:46:28 2017 Adrien KELLER
 */
 
 #include <sys/types.h>
@@ -20,9 +20,11 @@ int	create_file(int argc, char **argv, int opt1)
   int	i;
 
   if (opt1 == 2)
-    i = 3;
-  else
     i = 2;
+  else
+    i = 1;
+  fopen(argv[i], "w");
+  i++;
   while (i != argc)
   {
     stat(argv[i], &st);
