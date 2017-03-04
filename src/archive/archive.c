@@ -5,7 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:42:28 2017 Miles PROWER
-** Last update Sat Mar  4 15:16:07 2017 Miles PROWER
+** Last update Sat Mar  4 15:17:55 2017 Miles PROWER
 */
 
 #include "archive/archive.h"
@@ -24,6 +24,6 @@ int	main(int argc, char **argv)
     }
 
   printf("Verbose mode : %i\nOptind: %i\n", verbose, optind);
-  create_file(argc, argv);
+  create_file(argc, argv, optind);
   return (0);
 }
