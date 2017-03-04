@@ -5,7 +5,7 @@
 ** Login   <adrien.keller@epitech.eu>
 **
 ** Started on  Sat Mar  4 14:14:06 2017 Adrien KELLER
-** Last update Sat Mar  4 17:09:02 2017 Adrien KELLER
+** Last update Sat Mar  4 17:49:25 2017 Adrien KELLER
 */
 
 #include <sys/types.h>
@@ -47,6 +47,8 @@ int	create_file(int argc, char **argv, int opt1)
 
 int	create_header(int tar, int fd)
 {
+  t_posix_header	header;
+
   write(tar, "[INSERER LE HEADER POSIX]\n\n\n", 28);
   return (0);
 }
