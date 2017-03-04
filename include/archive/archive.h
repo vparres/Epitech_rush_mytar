@@ -5,7 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:45:07 2017 Miles PROWER
-** Last update Sat Mar  4 14:24:41 2017 Miles PROWER
+** Last update Sat Mar  4 15:00:33 2017 Miles PROWER
 */
 
 #ifndef ARCHIVE_H_
@@ -34,5 +34,7 @@ typedef struct	s_posix_header
 
 # include <stdio.h>
 # include <unistd.h>
+
+static int	verbose;
 
 #endif /* !ARCHIVE_H_ */

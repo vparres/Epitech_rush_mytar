@@ -5,24 +5,25 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:42:28 2017 Miles PROWER
-** Last update Sat Mar  4 14:23:37 2017 Adrien KELLER
+** Last update Sat Mar  4 15:05:08 2017 Miles PROWER
 */
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include <stdio.h>
 #include "archive/archive.h"
 
-int	main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
+  int	c;
 
-  if (argc < 2)
-  {
-    write(2, "Not enough arguments\n", 21);
-    return (84);
-  }
-  create_file(argv);
+  verbose = 0;
+  while ((c = getopt(argc, argv, "v")) != -1)
+    {
+      if (c == 'v')
+	verbose = 1;
+      if (c == '?')
+	return (84);
+    }
+
+  printf("Verbose mode : %i\nOptind: %i\n", verbose, optind);
 
   return (0);
 }
