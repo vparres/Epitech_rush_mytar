@@ -5,7 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:42:28 2017 Miles PROWER
-** Last update Sat Mar  4 15:24:22 2017 Adrien KELLER
+** Last update Sat Mar  4 23:03:12 2017 Miles PROWER
 */
 
 #include "archive/archive.h"
@@ -14,16 +14,21 @@ int	main(int argc, char **argv)
 {
   int	c;
 
-  verbose = 0;
-  while ((c = getopt(argc, argv, "v")) != -1)
+  if (argc == 1 || argc == 2)
+    return (84);
+  else
     {
-      if (c == 'v')
-	verbose = 1;
-      if (c == '?')
-	return (84);
-    }
+      verbose = 0;
+      while ((c = getopt(argc, argv, "v")) != -1)
+	{
+	  if (c == 'v')
+	    verbose = 1;
+	  if (c == '?')
+	    return (84);
+	}
 
-  printf("Verbose mode : %i\nOptind: %i\n", verbose, optind);
-  create_file(argc, argv, optind);
-  return (0);
+      printf("Verbose mode : %i\nOptind: %i\n", verbose, optind);
+      create_file(argc, argv, optind);
+      return (0);
+    }
 }
