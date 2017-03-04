@@ -5,7 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:45:07 2017 Miles PROWER
-** Last update Sat Mar  4 15:24:29 2017 Miles PROWER
+** Last update Sat Mar  4 17:16:05 2017 Adrien KELLER
 */
 
 #ifndef ARCHIVE_H_
@@ -38,5 +38,6 @@ typedef struct	s_posix_header
 static int	verbose;
 
 int	create_file(int, char**, int);
+int	create_header(int tar, int fd);
 
 #endif /* !ARCHIVE_H_ */
