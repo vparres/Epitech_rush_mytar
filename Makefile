@@ -1,11 +1,11 @@
 ##
 ## Makefile for my_tar in /home/tails/Perso/Git/CPE_2016_b2rush1
-## 
+##
 ## Made by Miles PROWER
 ## Login   <tails@epitech.net>
-## 
+##
 ## Started on  Fri Mar  3 21:31:50 2017 Miles PROWER
-## Last update Fri Mar  3 21:53:20 2017 Miles PROWER
+## Last update Sat Mar  4 14:25:30 2017 Adrien KELLER
 ##
 
 NAME		= 	my_tar
@@ -22,7 +22,8 @@ LDFLAGS		=
 
 SRC		= 	src/tar/tar.c
 
-SRC_TAR		=	src/archive/archive.c
+SRC_TAR		=	src/archive/archive.c			\
+						src/archive/create_file.c
 
 SRC_UNTAR	=	src/unarchive/unarchive.c
 
