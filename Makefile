@@ -5,7 +5,7 @@
 ## Login   <tails@epitech.net>
 ##
 ## Started on  Fri Mar  3 21:31:50 2017 Miles PROWER
-## Last update Sat Mar  4 15:47:05 2017 Adrien KELLER
+## Last update Sun Mar  5 16:08:22 2017 Adrien KELLER
 ##
 
 NAME		= 	my_tar
@@ -23,7 +23,7 @@ LDFLAGS		=
 SRC		= 	src/tar/tar.c
 
 SRC_TAR		=	src/archive/archive.c			\
-						src/archive/create_file.c
+						src/archive/create_header.c
 
 SRC_UNTAR	=	src/unarchive/unarchive.c
 
