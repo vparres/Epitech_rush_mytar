@@ -5,7 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:45:07 2017 Miles PROWER
-** Last update Sun Mar  5 16:21:28 2017 Miles PROWER
+** Last update Sun Mar  5 16:59:45 2017 Miles PROWER
 */
 
 #ifndef ARCHIVE_H_
@@ -36,7 +36,7 @@ static int	verbose;
 
 t_posix_header	fill(t_posix_header header, struct stat st, char *argv);
 int		create_header(int, char **, int);
-int		create_archive(char **char_name);
+int		create_archive(char *char_name);
 int		create_file(int fd_arch, int fd_file, t_posix_header *header);
 int		close_archive(int fd_arch);
 
