@@ -5,7 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:45:07 2017 Miles PROWER
-** Last update Sun Mar  5 16:02:09 2017 Adrien KELLER
+** Last update Sun Mar  5 16:16:43 2017 Miles PROWER
 */
 
 #ifndef ARCHIVE_H_
@@ -32,12 +32,9 @@ typedef struct	s_posix_header
   char	pad[12];
 }		t_posix_header;
 
-# include <stdio.h>
-# include <unistd.h>
-
 static int	verbose;
 
 t_posix_header	fill(t_posix_header header, struct stat st, char *argv);
-create_header(int, char **, int);
+int		create_header(int, char **, int);
 
 #endif /* !ARCHIVE_H_ */
