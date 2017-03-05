@@ -5,14 +5,17 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Fri Mar  3 21:42:28 2017 Miles PROWER
-** Last update Sat Mar  4 23:03:12 2017 Miles PROWER
+** Last update Sun Mar  5 16:27:12 2017 Miles PROWER
 */
 
 #include "archive/archive.h"
+#include <unistd.h>
+#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
   int	c;
+  int	fd_arch;
 
   if (argc == 1 || argc == 2)
     return (84);
@@ -28,7 +31,8 @@ int	main(int argc, char **argv)
 	}
 
       printf("Verbose mode : %i\nOptind: %i\n", verbose, optind);
-      create_file(argc, argv, optind);
+      fd_arch = create_archive(argv[2]);
+      close_archive(fd_arch);
       return (0);
     }
 }
