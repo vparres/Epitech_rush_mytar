@@ -5,7 +5,7 @@
 ** Login   <tails@epitech.net>
 **
 ** Started on  Sun Mar  5 15:04:55 2017 Miles PROWER
-** Last update Sun Mar  5 16:09:02 2017 Miles PROWER
+** Last update Sun Mar  5 16:21:22 2017 Miles PROWER
 */
 
 #include <stdlib.h>
@@ -32,7 +32,7 @@ int	create_file(int fd_arch, int fd_file, t_posix_header *header)
 
   i = 0;
   write(fd_arch, &header, 512); //write header
-  if (verbse == 1)
+  if (verbose == 1)
     printf("%s", header->name);
   while (i =< file_size)
     {
