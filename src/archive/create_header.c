@@ -5,7 +5,7 @@
 ** Login   <adrien.keller@epitech.eu>
 **
 ** Started on  Sat Mar  4 14:14:06 2017 Adrien KELLER
-** Last update Sun Mar  5 16:11:05 2017 Miles PROWER
+** Last update Sun Mar  5 16:44:06 2017 Adrien KELLER
 */
 
 #include <sys/types.h>
@@ -27,7 +27,7 @@ int	create_header(int argc, char **argv, int opt1)
   i++;
   while (i != argc)
     {
-      stat(argv[i], &st);
+      lstat(argv[i], &st);
       header = fill(header, st, argv[i]);
       //create_file(argv, );
     }
@@ -36,22 +36,46 @@ int	create_header(int argc, char **argv, int opt1)
 
 t_posix_header	fill(t_posix_header header, struct stat st, char *argv)
 {
+  int	size;
+
+  if (type(st) != 0)
+    size = 0;
+  else
+    size = st.st_size;
   strncpy(header.name, argv, 100);
   snprintf(header.mode, 8, "%07o", st.st_mode);
-  header.uid = st.st_uid;
-  header.gid = st.st_gid;
-  header.size = st.st_size;
-  header.mtime = st.st_mtim.tv_sec;
-  header.checksum = cheksum();
-  header.typeflag = type(); //???
-  header.linkname = link;
-  header.magic = "ustar";
-  header.version = "00";
+  snprintf(header.uid, 8, "%07o", st.st_uid);
+  snprintf(header.gid, 8, "%07o", st.st_gid);
+  snprintf(header.typeflag, 1, "%00o", type());
+  snprintf(header.size, 12, "%011o", size);
+  snprintf(header.mtime, 12, "%011o", st.st_mtim.tv_sec);
+  snprintf(header.checksum, 8, "%07o", cheksum());
+  snprintf(header.linkname, 100, "%099o", link);
+  snprintf(header.magic, 6, "%05o", "Ustar");
+  snprintf(header.version, 2, "%01o", "00");
   strncpy(header.uname, getgrgid(), 32);
   strncpy(header.gname, getpwuid(), 32);
-  header.devmajor = st.devmajor;
-  header.devminor = st.devminor;
-  header.prefix = prefix;
-  header.pad = pad;
+  snprintf(header.devmajor, 8, "%07o", devmajor);
+  snprintf(header.devminor, 8, "%07o", devminor);
+  snprintf(header.prefix, 155, "%0154o", "\0");
+  snprintf(header.pad, 12, "%011o", pad);
   return (header);
+}
+
+int	type(struct stat st)
+{
+  if (st.st_mode == S_IFREG)
+    return (0);
+  if (st.st_mode == S_IFLNK)
+    return (2);
+  if (st.st_mode == S_IFDIR)
+    return (5);
+}
+
+int	checksum()
+{
+  int	checksum;
+
+  checksum = 0;
+  return (checksum);
 }
