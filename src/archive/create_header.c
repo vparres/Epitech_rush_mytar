@@ -5,7 +5,7 @@
 ** Login   <adrien.keller@epitech.eu>
 **
 ** Started on  Sat Mar  4 14:14:06 2017 Adrien KELLER
-** Last update Sun Mar  5 16:03:17 2017 Adrien KELLER
+** Last update Sun Mar  5 16:11:05 2017 Miles PROWER
 */
 
 #include <sys/types.h>
@@ -45,10 +45,10 @@ t_posix_header	fill(t_posix_header header, struct stat st, char *argv)
   header.checksum = cheksum();
   header.typeflag = type(); //???
   header.linkname = link;
-  header.magic = "Ustar";
+  header.magic = "ustar";
   header.version = "00";
-   strncpy(header.uname, getgrgid(), 32);
-   strncpy(header.gname, getpwuid(), 32);
+  strncpy(header.uname, getgrgid(), 32);
+  strncpy(header.gname, getpwuid(), 32);
   header.devmajor = st.devmajor;
   header.devminor = st.devminor;
   header.prefix = prefix;
