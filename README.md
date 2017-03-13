@@ -18,6 +18,7 @@ Subject
 * Should complies with the POSIX's ustar norm.
 
 *Usage :*
+
 ```Tails-sh $> ./my_archive
 Usage: ./my_archive [archive_name] [files ...]```
 
