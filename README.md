@@ -19,17 +19,20 @@ Subject
 
 *Usage :*
 
-```Tails-sh $> ./my_archive
+```
+$> ./my_archive
+Usage: ./my_archive [archive_name] [files ...]
+```
 
-Usage: ./my_archive [archive_name] [files ...]```
+```
+Tails-sh $> ./my_unarchive
+Usage: ./my_unarchive [archive_name]
+```
 
-```Tails-sh $> ./my_unarchive
-
-Usage: ./my_unarchive [archive_name]```
-
-```Tails-sh $> ./my_tar cf toto file1 directory1 file2
-
-Tails-sh $> ./my_tar xf toto```
+```
+Tails-sh $> ./my_tar cf toto file1 directory1 file2
+Tails-sh $> ./my_tar xf toto
+```
 
 For the my_tar xcft options are mendatory. We also decided to implent the v option.
 
